@@ -82,9 +82,9 @@ function zonkey_recent_posts_shortcode( $atts ) {
                     $posts_display .= '<h4>' . get_the_term_list($post_ID , $taxonomy, '', ', ') . '</h4>';
                 }
                 if ((!$show_full_post)) {
-                    $posts_display .= '<p class="zrp_excerpt">' . substr(strip_tags(apply_filters('the_content', get_the_content())), 0, $excerpt_length) . '...</p>';
+                    $posts_display .= '<p class="zrp-excerpt">' . substr(strip_tags(apply_filters('the_content', get_the_content())), 0, $excerpt_length) . '...</p>';
                 } else {
-                    $posts_display .= '<div class="zrp_content">' . apply_filters('the_content', get_the_content()) . '</div>';
+                    $posts_display .= '<div class="zrp-content">' . apply_filters('the_content', get_the_content()) . '</div>';
                 }
                 if($show_date){$posts_display .= '<span class="zrp-date">'. get_the_date('M j, Y', $post_ID) . '</span>';}
                 $posts_display .= '</div></div>';
